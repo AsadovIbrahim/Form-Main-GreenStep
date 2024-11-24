@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modernized Page</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header class="logo">
+        <div class="logo-left">LOGO</div>
+        <div class="menu">
+            <button class="menu-button" onclick="toggleDropdown()">Menü</button>
+            <div class="dropdown-content">
+                <a href="https://www.google.com" target="_blank">Google</a>
+                <a href="https://www.youtube.com" target="_blank">YouTube</a>
+                <a href="https://www.openai.com" target="_blank">OpenAI</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <nav class="category-nav">
+            <div class="categories">
+                <div class="category active" onclick="toggleCategory(0)">Nəqliyat</div>
+                <div class="category" onclick="toggleCategory(1)">Enerji istifadəsi</div>
+                <div class="category" onclick="toggleCategory(2)">Qida</div>
+                <div class="category" onclick="toggleCategory(3)">Alış-Veriş</div>
+                <div class="category" onclick="toggleCategory(4)">Plastik İstifadəsi</div>
+                <div class="category" onclick="toggleCategory(5)">Digər</div>
+            </div>
+        </nav>
+
+        <section class="category-content-wrapper">
+            <form action="">
+            <div class="category-content active">
+                <div class="inputs">
+                    <input type="number" placeholder="Benzin">
+                </div>
+
+                <div class="inputs">
+                    <input type="number" placeholder="Dizel">
+                </div>
+            </div>
+            <div class="category-content">
+                <div class="inputs">
+                    <input type="number" placeholder="Elektrik enerjisi">
+                    <input type="number" placeholder="Qida">
+                </div>
+
+                <div class="inputs">
+                    <input type="number" placeholder="Təbii qaz">
+                </div>
+            </div>
+            <div class="category-content">
+                <div class="inputs">
+                    <input type="number" placeholder="Mal əti">
+                </div>
+
+                <div class="inputs">
+                    <input type="number" placeholder="Toyuq əti">
+                </div>
+
+                <div class="inputs">
+                    <input type="number" placeholder="Süd">
+                </div>
+
+
+                <div class="inputs">
+                    <input type="number" placeholder="Tərəvəz">
+                </div>
+
+
+                <div class="inputs">
+                    <input type="number" placeholder="Meyvə">
+                </div>
+
+            </div>
+            <div class="category-content">
+                <div class="inputs">
+                    <input type="number" placeholder="Smartfon">
+                </div>
+
+                <div class="inputs">
+                    <input type="number" placeholder="Laptop">
+                </div>
+
+                
+                <div class="inputs">
+                    <input type="number" placeholder="Köynək">
+                </div>
+
+                <div class="inputs">
+                    <input type="number" placeholder="T-Shirt">
+                </div>
+
+                <div class="inputs">
+                    <input type="number" placeholder="Televizor">
+                </div>
+
+
+            </div>
+            <div class="category-content">
+                <div class="inputs">
+                    <input type="number" placeholder="Plastik torba">
+                </div>
+
+                <div class="inputs">
+                    <input type="number" placeholder="Plastik şüşə">
+                </div>
+
+                
+                <div class="inputs">
+                    <input type="number" placeholder="Plastik qab">
+                </div>
+
+
+            </div>
+
+
+            <div class="category-content">
+                <div class="survey-container">
+                    <form method="post">
+                        <h2>Həyat Tərzi və Vərdişlər Sorğusu</h2>
+                        <p>Həyat tərzinizi daha yaxşı başa düşmək üçün bu sorğunu tamamlayın.</p>
+                
+                        <!-- Smoking -->
+                        <div class="question">
+                            <label>Gündə neçə dəfə siqaret çəkirsiniz?</label>
+                            <input type="number" id="smoking-frequency" name="smoking-frequency" min="0" max="100" placeholder="Məsələn: 5 dəfə">
+                        </div>
+                
+                        <!-- Health Habits -->
+                        <div class="question">
+                            <label>Həftədə neçə dəfə idman edirsiniz?</label>
+                            <input type="number" id="exercise-frequency" name="exercise-frequency" min="0" max="14" placeholder="Məsələn: 3 dəfə">
+                        </div>
+                
+                        <div class="question">
+                            <label>Gündə neçə litr su içirsiniz?</label>
+                            <input type="number" id="water-intake" name="water-intake" min="0" max="10" step="0.1" placeholder="Məsələn: 2.5 litr">
+                        </div>
+                
+                        <!-- Social Habits -->
+                        <div class="question">
+                            <label>Ayda neçə dəfə ictimai tədbirlərdə iştirak edirsiniz?</label>
+                            <input type="number" id="social-events" name="social-events" min="0" max="30" placeholder="Məsələn: 2 dəfə">
+                        </div>
+                
+                        <!-- Travel Habits -->
+                        <div class="question">
+                            <label>Həftədə neçə dəfə şəxsi avtomobil istifadə edirsiniz?</label>
+                            <input type="number" id="car-usage" name="car-usage" min="0" max="7" placeholder="Məsələn: 4 dəfə">
+                        </div>
+                
+                        <div class="question">
+                            <label>Ayda neçə dəfə təyyarə ilə səyahət edirsiniz?</label>
+                            <input type="number" id="plane-trips" name="plane-trips" min="0" max="30" placeholder="Məsələn: 1 dəfə">
+                        </div>
+                
+                        <!-- Technology Habits -->
+                        <div class="question">
+                            <label>Gündə neçə saat sosial mediadan istifadə edirsiniz?</label>
+                            <input type="number" id="social-media-usage" name="social-media-usage" min="0" max="24" placeholder="Məsələn: 3 saat">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Repeat for all categories -->
+            <button id="submit-button" type="submit" onclick="myFunction(event)">Submit</button>
+        </section>
+        </form>
+    </main>
+
+    
+
+</body>
+<script src="./index.js"></script>
+
+</html>
